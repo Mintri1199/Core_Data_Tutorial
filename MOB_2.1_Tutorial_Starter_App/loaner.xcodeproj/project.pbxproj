@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442ABCD1226686F5002838C3 /* LoanItems.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */; };
 		448856882239D544001EDDC4 /* Loanee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448856872239D544001EDDC4 /* Loanee.swift */; };
 		E929E9692124EB7E0018488C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929E9682124EB7E0018488C /* AppDelegate.swift */; };
 		E929E96B2124EB7E0018488C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929E96A2124EB7E0018488C /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoanItems.xcdatamodel; sourceTree = "<group>"; };
 		448856872239D544001EDDC4 /* Loanee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loanee.swift; sourceTree = "<group>"; };
 		E929E9652124EB7E0018488C /* loaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929E9682124EB7E0018488C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				E9BA28F221274FED004FA7D3 /* Item.swift */,
 				448856872239D544001EDDC4 /* Loanee.swift */,
+				442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D24DF121278BCD0045C5D8 /* ItemNotesViewController.swift in Sources */,
+				442ABCD1226686F5002838C3 /* LoanItems.xcdatamodeld in Sources */,
 				E929E96B2124EB7E0018488C /* ViewController.swift in Sources */,
 				E9BA28F321274FED004FA7D3 /* Item.swift in Sources */,
 				E96F11EA2128BCCA004D549A /* ItemCollectionViewCell.swift in Sources */,
@@ -391,6 +395,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */,
+			);
+			currentVersion = 442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */;
+			path = LoanItems.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E929E95D2124EB7E0018488C /* Project object */;
 }
