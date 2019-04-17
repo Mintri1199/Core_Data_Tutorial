@@ -15,14 +15,18 @@ class ItemStore: NSObject {
         // Create a NSPersistentContainer object
         let container = NSPersistentContainer(name: "LoanedItems")
         
-        // Load the saved datatbase if it exists, creates it if it does not, and returns an error under failure conditions.
-        container.loadPersistentStores { (description, error) in
+        container.loadPersistentStores { storeDescription, error in
             if let error = error {
-                print("Error setting up Core Data (\(error)).")
+                print("Unresolved error \(error)")
             }
         }
         return container
     }()
+    
+    enum FetchItemsResult {
+        case success([Item])
+        case failure(Error)
+    }
     
     func saveContext() {
         let viewContext = persistentContainer.viewContext
@@ -36,10 +40,19 @@ class ItemStore: NSObject {
                 let nserror = error as NSError
                 fatalError("Unresolve error \(nserror)")
             }
-            
         }
     }
     
-    
-    
+    func fetchPersistedData(completion: @escaping (FetchItemsResult) -> Void) {
+        
+        let fetchRequest: NSFetchRequest<Item> = Item.createFetchRequest()
+        let viewContext = persistentContainer.viewContext
+        
+        do {
+            let allItems = try viewContext.fetch(fetchRequest)
+            completion(.success(allItems))
+        } catch {
+            completion(.failure(error))
+        }
+    }
 }

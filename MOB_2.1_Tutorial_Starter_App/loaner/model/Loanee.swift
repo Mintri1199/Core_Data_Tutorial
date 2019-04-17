@@ -35,7 +35,7 @@ public class Loanee: NSObject, NSCoding {
         aCoder.encode(contactNumber, forKey: Keys.contactNumber.rawValue)
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: Keys.name.rawValue) as! String
         contactNumber = aDecoder.decodeObject(forKey: Keys.contactNumber.rawValue) as? String
         super.init()

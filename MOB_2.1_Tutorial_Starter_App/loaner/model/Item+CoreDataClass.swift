@@ -17,11 +17,11 @@ public class Item: NSManagedObject {
     override public func awakeFromInsert() {
         super.awakeFromInsert()
         
-        // Give properties initial value
-        itemTitle = "Untitle item"
+        // Give properties initial values
+        itemTitle = "Untitled Item"
         notes = ""
         itemImage = UIImage(named: "no item image")!
-        loanee = Loanee.init(name: "no name", contactNumber: "no contact number")
+        loanee = Loanee(name: "", contactNumber: "")
     }
     
     func assignLoanee(name: String?, phoneNumber: String?) {
@@ -32,7 +32,6 @@ public class Item: NSManagedObject {
         }
         
         if let contactName = name {
-            
             //update loanee var
             let newLoanee = Loanee(
                 name: contactName,
