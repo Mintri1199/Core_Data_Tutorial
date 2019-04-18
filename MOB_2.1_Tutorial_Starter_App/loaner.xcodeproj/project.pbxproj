@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		442ABCD1226686F5002838C3 /* LoanItems.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */; };
+		442ABCD1226686F5002838C3 /* LoanedItems.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCCF226686F5002838C3 /* LoanedItems.xcdatamodeld */; };
+		442ABCD4226692EF002838C3 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCD2226692EF002838C3 /* Item+CoreDataClass.swift */; };
+		442ABCD5226692EF002838C3 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCD3226692EF002838C3 /* Item+CoreDataProperties.swift */; };
+		442ABCD72266A836002838C3 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ABCD62266A836002838C3 /* ItemStore.swift */; };
 		448856882239D544001EDDC4 /* Loanee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448856872239D544001EDDC4 /* Loanee.swift */; };
 		E929E9692124EB7E0018488C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929E9682124EB7E0018488C /* AppDelegate.swift */; };
 		E929E96B2124EB7E0018488C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929E96A2124EB7E0018488C /* ViewController.swift */; };
@@ -16,7 +19,6 @@
 		E929E9732124EB810018488C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E929E9712124EB810018488C /* LaunchScreen.storyboard */; };
 		E969554E21277C3100457E12 /* ItemEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E969554D21277C3100457E12 /* ItemEditorViewController.swift */; };
 		E96F11EA2128BCCA004D549A /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F11E92128BCCA004D549A /* ItemCollectionViewCell.swift */; };
-		E9BA28F321274FED004FA7D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA28F221274FED004FA7D3 /* Item.swift */; };
 		E9BA28F521275B1A004FA7D3 /* ItemDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA28F421275B1A004FA7D3 /* ItemDetailedViewController.swift */; };
 		E9D24DEF212789B90045C5D8 /* UIImage+ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D24DEE212789B90045C5D8 /* UIImage+ImagePickerController.swift */; };
 		E9D24DF121278BCD0045C5D8 /* ItemNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D24DF021278BCD0045C5D8 /* ItemNotesViewController.swift */; };
@@ -25,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoanItems.xcdatamodel; sourceTree = "<group>"; };
+		442ABCD2226692EF002838C3 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		442ABCD3226692EF002838C3 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		442ABCD62266A836002838C3 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		448856872239D544001EDDC4 /* Loanee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loanee.swift; sourceTree = "<group>"; };
 		E929E9652124EB7E0018488C /* loaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929E9682124EB7E0018488C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		E929E9742124EB810018488C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E969554D21277C3100457E12 /* ItemEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditorViewController.swift; sourceTree = "<group>"; };
 		E96F11E92128BCCA004D549A /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		E9BA28F221274FED004FA7D3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E9BA28F421275B1A004FA7D3 /* ItemDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailedViewController.swift; sourceTree = "<group>"; };
 		E9D24DEE212789B90045C5D8 /* UIImage+ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImagePickerController.swift"; sourceTree = "<group>"; };
 		E9D24DF021278BCD0045C5D8 /* ItemNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNotesViewController.swift; sourceTree = "<group>"; };
@@ -77,9 +81,11 @@
 		44C7B628222722A100A8A0CF /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E9BA28F221274FED004FA7D3 /* Item.swift */,
 				448856872239D544001EDDC4 /* Loanee.swift */,
-				442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */,
+				442ABCD2226692EF002838C3 /* Item+CoreDataClass.swift */,
+				442ABCD3226692EF002838C3 /* Item+CoreDataProperties.swift */,
+				442ABCD62266A836002838C3 /* ItemStore.swift */,
+				442ABCCF226686F5002838C3 /* LoanedItems.xcdatamodeld */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -188,13 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D24DF121278BCD0045C5D8 /* ItemNotesViewController.swift in Sources */,
-				442ABCD1226686F5002838C3 /* LoanItems.xcdatamodeld in Sources */,
+				442ABCD1226686F5002838C3 /* LoanedItems.xcdatamodeld in Sources */,
 				E929E96B2124EB7E0018488C /* ViewController.swift in Sources */,
-				E9BA28F321274FED004FA7D3 /* Item.swift in Sources */,
 				E96F11EA2128BCCA004D549A /* ItemCollectionViewCell.swift in Sources */,
 				E9BA28F521275B1A004FA7D3 /* ItemDetailedViewController.swift in Sources */,
+				442ABCD4226692EF002838C3 /* Item+CoreDataClass.swift in Sources */,
+				442ABCD5226692EF002838C3 /* Item+CoreDataProperties.swift in Sources */,
 				E9D24DF3212794E30045C5D8 /* ItemContactInfoViewController.swift in Sources */,
 				E9D24DEF212789B90045C5D8 /* UIImage+ImagePickerController.swift in Sources */,
+				442ABCD72266A836002838C3 /* ItemStore.swift in Sources */,
 				E929E9692124EB7E0018488C /* AppDelegate.swift in Sources */,
 				E969554E21277C3100457E12 /* ItemEditorViewController.swift in Sources */,
 				448856882239D544001EDDC4 /* Loanee.swift in Sources */,
@@ -397,13 +405,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		442ABCCF226686F5002838C3 /* LoanItems.xcdatamodeld */ = {
+		442ABCCF226686F5002838C3 /* LoanedItems.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */,
 			);
 			currentVersion = 442ABCD0226686F5002838C3 /* LoanItems.xcdatamodel */;
-			path = LoanItems.xcdatamodeld;
+			path = LoanedItems.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
