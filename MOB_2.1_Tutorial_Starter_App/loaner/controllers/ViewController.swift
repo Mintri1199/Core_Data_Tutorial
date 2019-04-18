@@ -46,6 +46,19 @@ class ViewController: UIViewController {
         return newItem
     }
     
+    private func deleteItem(at index: Int) {
+        // Delete the user selected item from the view context
+        let viewContext = store.persistentContainer.viewContext
+        viewContext.delete(items[index])
+        
+        // Delete the user selected item from the datasource
+        items.remove(at: index)
+        collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
+        
+        // Save the changes to the Context
+        store.saveContext()
+    }
+    
     // populate an array with fetched results on success, or to delete all items from that array on failure
     private func updateDataSource() {
         self.store.fetchPersistedData {
@@ -73,10 +86,10 @@ class ViewController: UIViewController {
         deleteItem(at: index)
     }
     
-    func deleteItem(at index: Int) {
-        items.remove(at: index)
-        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
-    }
+//    func deleteItem(at index: Int) {
+//        items.remove(at: index)
+//        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
